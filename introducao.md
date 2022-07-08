@@ -21,4 +21,7 @@ E devido a esse suporte todos esses tipos de sistemas podem ser desenvolvidos co
 - Machine Learning;
 - Aplicativos de console;
 
-
+Pra executar uma página de códigos em node, faça como no exemplo abaixo:
+~~~
+node app.js
+~~~
