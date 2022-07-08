@@ -25,3 +25,8 @@ Pra executar uma página de códigos em node, faça como no exemplo abaixo:
 ~~~
 node app.js
 ~~~
+O operador unário, serve para inverter o valor de um boolean a fim de facilitar a verificação:
+~~~
+const valido = false;
+console.log(!valido); // true
+~~~
