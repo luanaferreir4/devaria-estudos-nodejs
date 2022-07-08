@@ -17,7 +17,7 @@ const validaNumInformado = (numero) => {
 readLine.question('Por favor informar um numero: ', (num1) => {
     try {
     const numero1 = Number.parseFloat(num1);
-    readLine.question('Por favor informar outro numero: ', (num2) => {
+    readLine.question('Por favor informar outro numero: ', (num2) => { 
         try {
             const numero2 = Number.parseFloat(num2);
             readLine.question('Por favor informar um operador matemático: ', (oper) => {
