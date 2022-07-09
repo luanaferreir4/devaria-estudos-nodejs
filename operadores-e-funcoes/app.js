@@ -8,42 +8,58 @@
 const readLine = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout,
-})
+});
 
 const validaNumInformado = (numero) => {
-
+    try {
+        return Number.parseFloat(numero);    // função que diminui o código.
+    }catch(erro) {
+        console.log('Número informado é inválido.');
+    }
 }
 
-readLine.question('Por favor informar um numero: ', (num1) => {
-    try {
-    const numero1 = Number.parseFloat(num1);
-    readLine.question('Por favor informar outro numero: ', (num2) => { 
-        try {
-            const numero2 = Number.parseFloat(num2);
-            readLine.question('Por favor informar um operador matemático: ', (oper) => {
-                switch(oper) {
-                    case '+':
-                        return num1 + num2;
-                        break;
-                    case '-':
-                        return num1 - num2;
-                        break;
-                    case '*' || 'x':
-                        return num1 * num2;
-                        break;
-                    case '/' || '%':
-                        return num1 / num2;
-                        break;
-                }
-            })
-        }catch(erro) {
-            console.log("Número informado não é válido!");
-        }
-        
-    })
-    }catch(erro) {
-        console.log('Número informado não é válido!');
+const validaOperador = (operador) => {
+    switch(operador) {
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+        case '%':
+            return operador;
+            break;
+        default:
+            console.log('Operador informado é inválido!');
+            return null;
+    }
+}
+
+readLine.question('Nos informe um número: ', (numero1) => {
+    const numeroValidado1 = validaNumInformado(numero1);
+    if(numeroValidado1) {
+        readLine.question('Nos informe outro número: ', (numero2) => {
+            const numeroValidado2 = validaNumInformado(numero2);
+            if(numeroValidado2) {
+                readLine.question('Nos informe o operador: ', (operador) => {
+                    const operadorValidado = validaOperador(operador);
+                    if(operadorValidado) {
+                        switch(operadorValidado) {
+                            case '+': console.log(numeroValidado1 + numeroValidado2); 
+                            break;
+                            case '-': console.log(numeroValidado1 - numeroValidado2); 
+                            break;
+                            case '*': console.log(numeroValidado1 * numeroValidado2); 
+                            break;
+                            case '/': console.log(numeroValidado1 / numeroValidado2); 
+                            break;
+                            case '%': console.log(numeroValidado1 % numeroValidado22); 
+                            break;
+                            default: break;
+                        }
+                    }
+                })
+            }
+        })
     }
 })
 
-// 00:41
+// 0:55
