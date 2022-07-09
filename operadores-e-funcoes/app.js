@@ -11,11 +11,11 @@ const readLine = require('readline').createInterface({
 });
 
 const validaNumInformado = (numero) => {
-    try {
-        return Number.parseFloat(numero);    // função que diminui o código.
-    }catch(erro) {
-        console.log('Número informado é inválido.');
-    }
+        const resultado = Number.parseFloat(numero);    // função que diminui o código.
+        if(!resultado) { // se o numero não for do tipo number parsefloat:
+            console.log('Número informado é inválido');
+        } // se for, retorne o resultado:
+            return resultado;
 }
 
 const validaOperador = (operador) => {
