@@ -49,9 +49,4 @@ itens que o resultado de toda condição for true.
 const qntdNotasAcima80 = notas.filter(notas => notas > 80).length;
 console.log(qntdNotasAcima80, "notas acima de 80.");
 
-// HORA DA PRÁTICA
-/*
- Escrever um programa que recebe alguns produtos como argumento, validar se esses produtos estão na lista de produtos
-disponíveis do mercado, caso esteja avisar o usuário quais produtos tem e quais não tem e por ultimo exibir a lista de
-produtos disponíveis ordenados por ordem alfabética do mercado para que o usuário possa pedir na próxima vez.
-*/
+
