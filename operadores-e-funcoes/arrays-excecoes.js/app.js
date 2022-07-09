@@ -5,26 +5,37 @@ disponíveis do mercado, caso esteja avisar o usuário quais produtos tem e quai
 produtos disponíveis ordenados por ordem alfabética do mercado para que o usuário possa pedir na próxima vez.
 */
 
-const listaDeProdutosDisponiveis = [
-    "Pao",
-    "Leite",    
-    "Cafe",
-    "Laranja",
-    "Macarrao",
-    "Sabonete",
-    "Detergente"
-];
+try {
+    const listaDeProdutosDisponiveis = [
+        "Pao",
+        "Leite",    
+        "Cafe",
+        "Laranja",
+        "Macarrao",
+        "Sabonete",
+        "Detergente"
+    ];
+    
+    const listaArgs = process.argv.slice(2); 
+    
+    const listaDeProdutosSolicitadosDisponiveis = listaDeProdutosDisponiveis.filter((produto) => {
+        return listaArgs.find((argumento) => argumento === produto);
+    })
+    
+    listaDeProdutosSolicitadosDisponiveis.forEach((produto) => console.log(`Este produto nós temos: ${produto}`));
+    
+    const listaDeProdutosSolicitadosNaoDisponiveis = listaArgs.filter((argumento) => {
+        return !listaDeProdutosDisponiveis.find((produto) => produto === argumento);
+    });
+    
+    listaDeProdutosSolicitadosNaoDisponiveis.forEach((produto) => console.log(`Este produto nós não temos: ${produto}`));
+    
+    listaDeProdutosDisponiveis.sort(); // vai ordenar em ordem alfabética pq o produto é uma string.
+    listaDeProdutosDisponiveis.forEach((produto) => {
+        console.log(produto);
+    })
 
-const listaArgs = process.argv.slice(2); 
+} catch(erro) {
+    console.log('Não foi possível executar pedido de compra.')
+}
 
-const listaDeProdutosSolicitadosDisponiveis = listaDeProdutosDisponiveis.filter((produto) => {
-    return listaArgs.find((argumento) => argumento === produto);
-})
-
-listaDeProdutosSolicitadosDisponiveis.forEach((produto) => console.log(`Este produto nós temos: ${produto}`));
-
-const listaDeProdutosSolicitadosNaoDisponiveis = listaArgs.filter((argumento) => {
-    return !listaDeProdutosDisponiveis.find((produto) => produto === argumento);
-});
-
-listaDeProdutosSolicitadosNaoDisponiveis.forEach((produto) => console.log(`Este produto nós não temos: ${produto}`));
