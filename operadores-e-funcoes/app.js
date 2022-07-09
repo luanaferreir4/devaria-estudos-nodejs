@@ -29,7 +29,7 @@ const validaOperador = (operador) => {
             break;
         default:
             console.log('Operador informado é inválido!');
-            return null;
+            return null; // tem que retornar algo inválido para os códigos que chamarão validaOperador
     }
 }
 
