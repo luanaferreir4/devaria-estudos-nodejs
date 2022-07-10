@@ -96,6 +96,8 @@ A principal característica do TS é sua tipagem forte. Mas também há outro as
 
 O JS, na maior parte do seu projeto de linguagem, não é tipado e a referência de tipo só vai até certo ponto. Daí uma necessidade maior de utilizar o TS caso queira suprir essas deficiências.
 
+TS é totalmente orientada a objetos.
+
 Documentação Oficial do TS:
 > https://www.typescriptlang.org/
 
@@ -129,3 +131,22 @@ O comportamento dela seria algo como, fazer uma chamada à API e depois exibir a
 Após a página ser carregada ou ter feito alguma requisição ao banco de dados, nenhuma outra chamada ao banco ou qualquer outra requisição à API será feita até o próximo "ciclo" de atualização, que é totalmente configurável.
 
 Dessa forma, a página será servida de forma totalmente estática. Há um ganho relevante de performance utilizando essa forma de servir páginas.
+
+#### Criando um projeto
+- Comando para criação de projetos no Next.js é: (lib que nos ajuda escrever códigos em next)
+~~~
+-npx create-next-app--typescript gerenciador-tarefas-devaria
+~~~
+- Usaremos o npx para buscar a dependência online do create-next-app;
+- Passaremos a opção -typescript para solicitar que seja criado o projeto com todo o contexto do typescript;
+- Por último vamos informar o nome do projeto a ser criado; 
+
+##### HORA DA PRÁTICA
+Agora que já entendemos como funciona o Next, o TS e a gestão de dependência, vamos exercitar algumas coisas:
+
+* Criar um projeto do Next.js;
+* Limpar para ficarmos apenas com os códigos de backend;
+* Adicionar dependência de tratativa de data;
+* Retornar para o usuário o resultado no endpoint solicitado;
+
+// 01:35
