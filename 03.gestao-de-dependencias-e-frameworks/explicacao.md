@@ -29,3 +29,24 @@ Tanto o NPM quanto Yarn utilizam o arquivo package.json para definir as dependen
 
 - Como saber que é npm?
 package.json
+
+- Como abrir um projeto com o npm? 
+~~~
+npm init
+~~~
+Abrir projeto com dados genéricos:
+~~~
+npm init -yes
+~~~
+
+Além do NPM a gestão de dependências do Node.js fornece mais um comando para nos facilitar a criar projetos baseados em alguns protótipos entre outras funções, o NPX.
+
+O NPX ele irá usar o pacote sem precisar baixar em sua máquina, sendo assim você você irá instalar um pacote no seu projeto ou até mesmo usar esse pacote, sem baixar os arquivos em sua máquina.
+
+### Para que o npx é útil?
+* Já instalou algum pacote global e precisou usá-lo pouquíssimas vezes?
+* Já teve problemas de incompatibilidade com pacotes globais por diferenças de versões em múltiplos projetos?
+* Já sentiu que sua máquina está poluída por diversos pacotes globais?
+* Quando você instala react-native em sua máquina e começa um projeto usando ele ao invés de NPX, você está usando a versão do react-native do pacote instalado em seu node_modules, já quando usa npx você usa um pacote na nuvem do node, então isso te dá liberdade para usar até
+
+// 00:36:00
