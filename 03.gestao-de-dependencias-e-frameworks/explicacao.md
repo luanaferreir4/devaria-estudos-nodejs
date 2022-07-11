@@ -135,8 +135,15 @@ Dessa forma, a página será servida de forma totalmente estática. Há um ganho
 #### Criando um projeto
 - Comando para criação de projetos no Next.js é: (lib que nos ajuda escrever códigos em next)
 ~~~
--npx create-next-app--typescript gerenciador-tarefas-devaria
+-npx create-next-app --typescript gerenciador-tarefas-devaria
 ~~~
+
+- Abre o vscode na pasta selecionada:
+
+~~~
+code .
+~~~ 
+
 - Usaremos o npx para buscar a dependência online do create-next-app;
 - Passaremos a opção -typescript para solicitar que seja criado o projeto com todo o contexto do typescript;
 - Por último vamos informar o nome do projeto a ser criado; 
@@ -149,4 +156,7 @@ Agora que já entendemos como funciona o Next, o TS e a gestão de dependência,
 * Adicionar dependência de tratativa de data;
 * Retornar para o usuário o resultado no endpoint solicitado;
 
-// 01:35
+- pro codigo rodar em Next.js:
+~~~
+npm run dev
+~~~ 
