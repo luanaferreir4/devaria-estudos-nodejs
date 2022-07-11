@@ -160,3 +160,16 @@ Agora que já entendemos como funciona o Next, o TS e a gestão de dependência,
 ~~~
 npm run dev
 ~~~ 
+
+## Projeto 
+Como projeto faremos o Devagram que é o Instagram da Devaria.
+
+O layout: https://www.figma.com/file/9KlZQL9sYthRiqdnehLzpj/Projeto-Devaria-2022?node-id=0%3A1
+
+### Iniciando o projeto
+Para finalizar nossa aula agora vamos iniciar nosso projeto que será desenvolvido ao longo das demais aulas então vamos seguir os seguintes passos:
+
+* Criar um projeto do Next.js e Github
+* Limpar para ficarmos apenas com os códigos de back end
+* Criar endpoint inicial de Login
+* Testar o endpoint no Postman
